@@ -17,3 +17,14 @@
 # transmogrify("hello", options)
 # # options shouldn't change.
 # ```
+
+def transmogrify(string, options={})
+  options.each do |k, v|
+    if v == true
+      string = [string].map!(&k)[0]
+    elsif k == :times
+      string = string * v
+    end
+  end
+  string
+end

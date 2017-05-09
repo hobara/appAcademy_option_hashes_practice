@@ -23,4 +23,3 @@ describe '#transmogrify' do
     expect(word).to eq("foobar")
   end
 end
-
